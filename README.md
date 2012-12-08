@@ -52,3 +52,19 @@ HowToUse
   mongo_img.download(image);
 </pre>
 
+Tips?
+==========
+激しく画像をアップロードする場合は、MongoDBのジャーナリング機能は無効にしておいた方がいいかもしれないです。
+
+<pre>
+ Ubuntu環境の場合は/etc/mongodb.confにMongoDBの設定があるので、ここを変更する。
+ 
+ $ vi /etc/mongodb.conf
+   ※以下のように修正
+   journal=true
+       ↓
+   journal=false
+   
+</pre>
+
+
